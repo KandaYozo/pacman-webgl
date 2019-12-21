@@ -1,0 +1,36 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Pac-Man.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl m1
+Ka 0.968627 0.901961 0.192157
+Kd 0.968627 0.901961 0.192157
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Pac-Man_Textures/m1.PNG
+
+newmtl m2
+Ka 0.062745 0.062745 0.062745
+Kd 0.062745 0.062745 0.062745
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Pac-Man_Textures/m2.PNG
+
+newmtl m3
+Ka 0.517647 0.509804 0.031373
+Kd 0.517647 0.509804 0.031373
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Pac-Man_Textures/m3.PNG
+
+#EOF

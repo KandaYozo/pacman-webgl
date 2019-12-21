@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gfx Lab</title>
+    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+       
+</head>
+
+<body>
+    <div style="text-align: center;">Time left = <span id="timer"></span></div>
+    <div style="text-align: center;">Coins = <span id="coins"></span></div>
+    <div >
+        <canvas width="1080" height="540" id="app" tabindex="1">
+            <!-- Here is where we will draw our scene -->
+        </canvas>
+    </div>
+    <div>
+        <span>Scene: </span>
+        <select name="scenes" id="scenes"></select>
+    </div>
+    <div id="controls"></div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#congrats" style="display: none;" id="congratsbutton">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lose" style="display: none;" id="losebutton">    
+    </button>
+    <div class="modal fade" tabindex="-1" role="dialog" id="congrats">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Congrautlations!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You Finished This Level</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"data-dismiss="modal">Next</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="lose">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Timeout!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You Lost The Game</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"data-dismiss="modal" onclick="location.reload();">Start Again!!</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The following line includes our script which will run WebGL -->
+    <script src="./src/app.ts"></script>
+    <script src="./src/jquery-3.4.1.slim.min.js"></script>
+    <script src="./src/popper.min.js"></script>
+    <script src="./src/bootstrap.min.js"></script>
+    
+
+    <script>
+        $('#congrats').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+
+        $('#lose').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+</body>
+
+</html>
